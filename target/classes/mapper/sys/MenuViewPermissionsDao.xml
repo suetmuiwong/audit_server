@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.et.auditServer.modules.sys.dao.MenuViewPermissionsDao" >
+  <sql id="Base_Column_List"  >
+    id AS "id" ,
+    menu_code AS "menuCode" ,
+    view_mode_code AS "viewModeCode"
+  </sql>
+    <select id="getByMenuCode" resultType="com.et.auditServer.modules.sys.dto.MenuViewPermissionsDto">
+        select
+        mvp.id menuViewPermissionsId,
+        mvp.menu_code menuCode,
+        vm.id viewModeId,
+        vm.mode_code modeCode,
+        vm.mode_name modeName,
+        vm.mode_desc modeDesc,
+        vm.mode_level modeLevel,
+        vm.mode_type modeType,
+        vm.enabled_flag enabledFlag
+        from sys_menu_view_permissions mvp
+        LEFT JOIN sys_view_mode vm on vm.mode_code=mvp.view_mode_code
+        WHERE mvp.menu_code=#{menuCode}
+    </select>
+
+</mapper>

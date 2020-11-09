@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.et.auditServer.modules.ed.dao.ProjInfoDao">
+    <resultMap id="BaseResultMap" type="com.et.auditServer.modules.ed.entity.ProjInfo">
+        <id column="proj_id" property="projId" jdbcType="INTEGER"/>
+        <result column="proj_name" property="projName" jdbcType="VARCHAR"/>
+        <result column="proj_desc" property="projDesc" jdbcType="VARCHAR"/>
+        <result column="startTime" property="startTime" jdbcType="TIMESTAMP"/>
+        <result column="endTime" property="endTime" jdbcType="TIMESTAMP"/>
+        <result column="manager" property="manager" jdbcType="VARCHAR"/>
+        <result column="auditee" property="auditee" jdbcType="VARCHAR"/>
+        <result column="auditedManager" property="auditedManager" jdbcType="VARCHAR"/>
+        <result column="supervisor" property="supervisor" jdbcType="VARCHAR"/>
+        <result column="office" property="office" jdbcType="VARCHAR"/>
+        <result column="officeManager" property="officeManager" jdbcType="VARCHAR"/>
+        <result column="creater" property="creater" jdbcType="VARCHAR"/>
+        <result column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    proj_id, proj_name, proj_desc,startTime,endTime, manager, auditee,  auditedManager,
+    supervisor,  office, officeManager, creater,createTime
+    </sql>
+
+
+    <select id="findListPage" resultMap="BaseResultMap" parameterType="java.lang.String">
+        SELECT
+        *
+        FROM ed_proj_info
+        <if test="projName != null and  projName !='' ">
+            where  proj_name like concat(concat("%", #{projName}), "%") escape '/'
+        </if>
+    </select>
+
+    <insert id="insert"  useGeneratedKeys="true" keyProperty="projId" parameterType="com.et.auditServer.modules.ed.entity.ProjInfo">
+        insert into ed_proj_info (
+            proj_id, proj_name, proj_desc, startTime,endTime, manager, auditee, auditedManager,
+             supervisor, office, officeManager, creater,createTime
+          )
+        values (
+            #{projId,jdbcType=INTEGER}, #{projName,jdbcType=VARCHAR}, #{projDesc,jdbcType=VARCHAR},
+            #{startTime,jdbcType=TIMESTAMP},#{endTime,jdbcType=TIMESTAMP}, #{manager,jdbcType=VARCHAR},
+            #{auditee,jdbcType=VARCHAR},#{auditedManager,jdbcType=VARCHAR}, #{supervisor,jdbcType=VARCHAR},
+            #{office,jdbcType=VARCHAR}, #{officeManager,jdbcType=VARCHAR}, #{creater,jdbcType=VARCHAR},
+            #{createTime,jdbcType=TIMESTAMP}
+          )
+    </insert>
+
+    <update id="update" parameterType="com.et.auditServer.modules.ed.entity.ProjInfo">
+        update ed_proj_info
+        <set>
+            <if test="projName != null">
+                proj_name = #{projName,jdbcType=VARCHAR},
+            </if>
+            <if test="projDesc != null">
+                proj_desc = #{projDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="startTime != null">
+                startTime = #{startTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endTime != null">
+                endTime = #{endTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="manager != null">
+                manager = #{manager,jdbcType=VARCHAR},
+            </if>
+            <if test="auditee != null">
+                auditee = #{auditee,jdbcType=VARCHAR},
+            </if>
+            <if test="auditedManager != null">
+                auditedManager = #{auditedManager,jdbcType=VARCHAR},
+            </if>
+            <if test="supervisor != null">
+                supervisor = #{supervisor,jdbcType=VARCHAR},
+            </if>
+            <if test="office != null">
+                office = #{office,jdbcType=VARCHAR},
+            </if>
+            <if test="officeManager != null">
+                officeManager = #{officeManager,jdbcType=VARCHAR},
+            </if>
+            <if test="creater != null">
+                creater = #{creater,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                createTime = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+
+        </set>
+        where proj_id = #{projId,jdbcType=INTEGER}
+    </update>
+
+    <delete id="deleteById" >
+    	delete from ed_proj_info where proj_id = #{projId,jdbcType=INTEGER}
+  	</delete>
+
+    <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from ed_proj_info
+        where proj_id = #{projId,jdbcType=INTEGER}
+        limit 1
+    </select>
+
+
+
+
+</mapper>

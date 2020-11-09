@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.et.auditServer.modules.sys.dao.CaptchaDao" >
+  <select id="queryByCaptcha" resultType="com.et.auditServer.modules.sys.entity.CaptchaEntity">
+    select * from sys_verification_code where captcha = #{captcha} and captcha_id= #{captchaId}
+    limit 1
+  </select>
+
+  <select id="queryByToken" resultType="com.et.auditServer.modules.sys.entity.CaptchaEntity">
+    select * from sys_verification_code where token = #{token}
+    limit 1
+  </select>
+
+  <insert id="save" parameterType="com.et.auditServer.modules.sys.entity.CaptchaEntity">
+      insert into sys_verification_code
+      (
+      captcha_id,
+      captcha,
+      expireTime,
+      updateTime
+      )
+      values
+      (
+      #{captchaId},
+      #{captcha},
+      #{expireTime},
+      #{updateTime}
+      )
+  </insert>
+
+  <update id="update" parameterType="com.et.auditServer.modules.sys.entity.CaptchaEntity">
+    update sys_verification_code
+    <set>
+      <if test="captcha != null">captcha = #{captcha}, </if>
+      <if test="expireTime != null">expireTime = #{expireTime}, </if>
+      <if test="updateTime != null">updateTime = #{updateTime},</if>
+    </set>
+    where captcha_id = #{captchaId}
+  </update>
+  
+  <delete id="deleteByCaptchaId">
+    DELETE  from sys_verification_code where captcha_id = #{captchaId}
+  </delete>
+
+    <delete id="deleteByExpired" parameterType="java.util.Date">
+        DELETE  from sys_verification_code where expireTime &lt; #{expireDate}
+    </delete>
+
+    <select id="selectByCaptchaId" resultType="com.et.auditServer.modules.sys.entity.CaptchaEntity">
+        select * from sys_verification_code where captcha_id= #{captchaId}
+        limit 1
+    </select>
+</mapper>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.et.auditServer.modules.sys.dao.MenuDao" >
+  <sql id="Base_Column_List"  >
+    menu_code AS "menuCode" ,
+    parent_code AS "parentCode" ,
+    tree_sort AS "treeSort" ,
+    tree_leaf AS "treeLeaf" ,
+    tree_level AS "treeLevel" ,
+    tree_names AS "treeNames" ,
+    menu_name AS "menuName" ,
+    menu_type AS "menuType" ,
+    menu_href AS "menuHref" ,
+    menu_target AS "menuTarget" ,
+    menu_icon AS "menuIcon" ,
+    permission AS "permission" ,
+    weight AS "weight" ,
+    is_show AS "isShow" ,
+    created AS "created" ,
+    created_date AS "createdDate" ,
+    last_updated AS "lastUpdated" ,
+    last_updated_date AS "lastUpdatedDate" ,
+    remark AS "remark"
+  </sql>
+  
+
+  <insert id="insert" parameterType="com.et.auditServer.modules.sys.entity.Menu" >
+    insert into sys_menu
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="menuCode != null" >
+        menu_code,
+      </if>
+      <if test="parentCode != null" >
+        parent_code,
+      </if>
+      <if test="treeSort != null" >
+        tree_sort,
+      </if>
+      <if test="treeLeaf != null" >
+        tree_leaf,
+      </if>
+      <if test="treeLevel != null" >
+        tree_level,
+      </if>
+      <if test="treeNames != null" >
+        tree_names,
+      </if>
+      <if test="menuName != null" >
+        menu_name,
+      </if>
+      <if test="menuType != null" >
+        menu_type,
+      </if>
+      <if test="menuHref != null" >
+        menu_href,
+      </if>
+      <if test="menuTarget != null" >
+        menu_target,
+      </if>
+      <if test="menuIcon != null" >
+        menu_icon,
+      </if>
+      <if test="permission != null" >
+        permission,
+      </if>
+      <if test="weight != null" >
+        weight,
+      </if>
+      <if test="isShow != null" >
+        is_show,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="createdDate != null" >
+        created_date,
+      </if>
+      <if test="lastUpdated != null" >
+        last_updated,
+      </if>
+      <if test="lastUpdatedDate != null" >
+        last_updated_date,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="menuCode != null" >
+        #{menuCode,jdbcType=VARCHAR},
+      </if>
+      <if test="parentCode != null" >
+        #{parentCode,jdbcType=VARCHAR},
+      </if>
+      <if test="treeSort != null" >
+        #{treeSort,jdbcType=DECIMAL},
+      </if>
+      <if test="treeLeaf != null" >
+        #{treeLeaf,jdbcType=CHAR},
+      </if>
+      <if test="treeLevel != null" >
+        #{treeLevel,jdbcType=DECIMAL},
+      </if>
+      <if test="treeNames != null" >
+        #{treeNames,jdbcType=VARCHAR},
+      </if>
+      <if test="menuName != null" >
+        #{menuName,jdbcType=VARCHAR},
+      </if>
+      <if test="menuType != null" >
+        #{menuType,jdbcType=CHAR},
+      </if>
+      <if test="menuHref != null" >
+        #{menuHref,jdbcType=VARCHAR},
+      </if>
+      <if test="menuTarget != null" >
+        #{menuTarget,jdbcType=VARCHAR},
+      </if>
+      <if test="menuIcon != null" >
+        #{menuIcon,jdbcType=VARCHAR},
+      </if>
+      <if test="permission != null" >
+        #{permission,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null" >
+        #{weight,jdbcType=DECIMAL},
+      </if>
+      <if test="isShow != null" >
+        #{isShow,jdbcType=CHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=VARCHAR},
+      </if>
+      <if test="createdDate != null" >
+        #{createdDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdated != null" >
+        #{lastUpdated,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdatedDate != null" >
+        #{lastUpdatedDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="update" parameterType="com.et.auditServer.modules.sys.entity.Menu" >
+    update sys_menu
+    <set >
+      <if test="parentCode != null" >
+        parent_code = #{parentCode,jdbcType=VARCHAR},
+      </if>
+      <if test="treeSort != null" >
+        tree_sort = #{treeSort,jdbcType=DECIMAL},
+      </if>
+      <if test="treeLeaf != null" >
+        tree_leaf = #{treeLeaf,jdbcType=CHAR},
+      </if>
+      <if test="treeLevel != null" >
+        tree_level = #{treeLevel,jdbcType=DECIMAL},
+      </if>
+      <if test="treeNames != null" >
+        tree_names = #{treeNames,jdbcType=VARCHAR},
+      </if>
+      <if test="menuName != null" >
+        menu_name = #{menuName,jdbcType=VARCHAR},
+      </if>
+      <if test="menuType != null" >
+        menu_type = #{menuType,jdbcType=CHAR},
+      </if>
+      <if test="menuHref != null" >
+        menu_href = #{menuHref,jdbcType=VARCHAR},
+      </if>
+      <if test="menuTarget != null" >
+        menu_target = #{menuTarget,jdbcType=VARCHAR},
+      </if>
+      <if test="menuIcon != null" >
+        menu_icon = #{menuIcon,jdbcType=VARCHAR},
+      </if>
+      <if test="permission != null" >
+        permission = #{permission,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null" >
+        weight = #{weight,jdbcType=DECIMAL},
+      </if>
+      <if test="isShow != null" >
+        is_show = #{isShow,jdbcType=CHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=VARCHAR},
+      </if>
+      <if test="createdDate != null" >
+        created_date = #{createdDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdated != null" >
+        last_updated = #{lastUpdated,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdatedDate != null" >
+        last_updated_date = #{lastUpdatedDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where menu_code = #{menuCode,jdbcType=VARCHAR}
+  </update>
+  <update id="lastUpdatedPrimaryKey" parameterType="com.et.auditServer.modules.sys.entity.Menu" >
+    update sys_menu
+    set parent_code = #{parentCode,jdbcType=VARCHAR},
+      tree_sort = #{treeSort,jdbcType=DECIMAL},
+      tree_leaf = #{treeLeaf,jdbcType=CHAR},
+      tree_level = #{treeLevel,jdbcType=DECIMAL},
+      tree_names = #{treeNames,jdbcType=VARCHAR},
+      menu_name = #{menuName,jdbcType=VARCHAR},
+      menu_type = #{menuType,jdbcType=CHAR},
+      menu_href = #{menuHref,jdbcType=VARCHAR},
+      menu_target = #{menuTarget,jdbcType=VARCHAR},
+      menu_icon = #{menuIcon,jdbcType=VARCHAR},
+      permission = #{permission,jdbcType=VARCHAR},
+      weight = #{weight,jdbcType=DECIMAL},
+      is_show = #{isShow,jdbcType=CHAR},
+      created = #{created,jdbcType=VARCHAR},
+      created_date = #{createdDate,jdbcType=TIMESTAMP},
+      last_updated = #{lastUpdated,jdbcType=VARCHAR},
+      last_updated_date = #{lastUpdatedDate,jdbcType=TIMESTAMP},
+      remark = #{remark,jdbcType=VARCHAR}
+    where menu_code = #{menuCode,jdbcType=VARCHAR}
+  </update>
+
+
+  <select id="findParentList" resultType="com.et.auditServer.modules.sys.entity.MenuTree" parameterType="com.et.auditServer.modules.sys.entity.MenuTree">
+    select
+      <include refid="Base_Column_List" />
+    from sys_menu
+    WHERE is_delete='NORMAL'
+    <if test="menuName == null or menuName == ''">
+      and parent_code='0'
+    </if>
+    <if test="menuName != null and menuName != ''">
+      and menu_name like concat(concat("%",#{menuName}),"%")
+    </if>
+    order by tree_level,tree_sort
+  </select>
+  <select id="findChildList" resultType="com.et.auditServer.modules.sys.entity.MenuTree" parameterType="com.et.auditServer.modules.sys.entity.MenuTree">
+    select
+      <include refid="Base_Column_List" />
+    from sys_menu
+    WHERE parent_code!='0'
+    and is_delete='NORMAL'
+    <if test="menuName != null and menuName != ''">
+      and menu_name like concat(concat("%",#{menuName}),"%")
+    </if>
+    order by tree_sort
+  </select>
+
+  <update id="updateBatch">
+    UPDATE sys_menu
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="tree_sort=case" suffix="end,">
+        <foreach collection="menuList" index="index" item="menu" >
+          <if test="menu.treeSort != null">
+            WHEN menu_code=#{menu.menuCode} THEN #{menu.treeSort}
+          </if>
+        </foreach>
+      </trim>
+    </trim>
+    WHERE
+    <foreach collection="menuList" item="menu" index="index" separator="or">
+      menu_code=#{menu.menuCode}
+    </foreach>
+  </update>
+
+    <select id="findByCode" resultType="com.et.auditServer.modules.sys.entity.MenuTree">
+        select
+          t2.menu_name AS parentName,
+          t1.menu_code AS "menuCode" ,
+          t1.parent_code AS "parentCode" ,
+          t1.tree_sort AS "treeSort" ,
+          t1.tree_leaf AS "treeLeaf" ,
+          t1.tree_level AS "treeLevel" ,
+          t1.tree_names AS "treeNames" ,
+          t1.menu_name AS "menuName" ,
+          t1.menu_type AS "menuType" ,
+          t1.menu_href AS "menuHref" ,
+          t1.menu_target AS "menuTarget" ,
+          t1.menu_icon AS "menuIcon" ,
+          t1.permission AS "permission" ,
+          t1.weight AS "weight" ,
+          t1.is_show AS "isShow" ,
+          t1.created AS "created" ,
+          t1.created_date AS "createdDate" ,
+          t1.last_updated AS "lastUpdated" ,
+          t1.last_updated_date AS "lastUpdatedDate" ,
+          t1.remark AS "remark"
+        from sys_menu t1 LEFT JOIN sys_menu t2 on t1.parent_code=t2.menu_code and t2.is_delete='NORMAL'
+        WHERE 1=1
+        and t1.is_delete='NORMAL'
+        and t1.menu_code=#{menuCode}
+    </select>
+
+  <select id="findUserParentList" resultType="com.et.auditServer.modules.sys.entity.MenuTree" parameterType="java.util.List">
+    select
+    t1.menu_code AS "menuCode" ,
+    t1.parent_code AS "parentCode" ,
+    t1.tree_sort AS "treeSort" ,
+    t1.tree_leaf AS "treeLeaf" ,
+    t1.tree_level AS "treeLevel" ,
+    t1.tree_names AS "treeNames" ,
+    t1.menu_name AS "menuName" ,
+    t1.menu_type AS "menuType" ,
+    t1.menu_href AS "menuHref" ,
+    t1.menu_target AS "menuTarget" ,
+    t1.menu_icon AS "menuIcon" ,
+    t1.permission AS "permission" ,
+    t1.weight AS "weight" ,
+    t1.is_show AS "isShow"
+    from sys_menu t1
+    LEFT JOIN sys_role_menu t2 on t1.menu_code=t2.menu_code and t2.is_delete='NORMAL'
+    where t1.is_delete='NORMAL'
+    and menu_type="1"
+    and parent_code="0"
+    and is_show="1"
+    <if test="roleList != null and roleList.size()>0 ">
+    and t2.role_code in
+      <foreach collection="roleList" index="index" item="item" open="(" separator="," close=")">
+          #{item.roleCode}
+      </foreach>
+    </if>
+    GROUP BY t1.menu_code
+    order by t1.tree_level,t1.tree_sort
+  </select>
+
+  <select id="findUserChildList" resultType="com.et.auditServer.modules.sys.entity.MenuTree" parameterType="java.util.List">
+    select
+    t1.menu_code AS "menuCode" ,
+    t1.parent_code AS "parentCode" ,
+    t1.tree_sort AS "treeSort" ,
+    t1.tree_leaf AS "treeLeaf" ,
+    t1.tree_level AS "treeLevel" ,
+    t1.tree_names AS "treeNames" ,
+    t1.menu_name AS "menuName" ,
+    t1.menu_type AS "menuType" ,
+    t1.menu_href AS "menuHref" ,
+    t1.menu_target AS "menuTarget" ,
+    t1.menu_icon AS "menuIcon" ,
+    t1.permission AS "permission" ,
+    t1.weight AS "weight" ,
+    t1.is_show AS "isShow"
+    from sys_menu t1
+    LEFT JOIN sys_role_menu t2 on t1.menu_code=t2.menu_code and t2.is_delete='NORMAL'
+    where  t1.is_delete='NORMAL'
+    and parent_code!="0"
+    and is_show="1"
+    <if test="roleList != null and roleList.size()>0">
+      and t2.role_code in
+      <foreach collection="roleList" index="index" item="item" open="(" separator="," close=")">
+        #{item.roleCode}
+      </foreach>
+    </if>
+    GROUP BY t1.menu_code
+    order by t1.tree_level,t1.tree_sort
+  </select>
+
+
+  <update id="deleteRoleMenu">
+    update sys_role_menu set is_delete='DELETE'
+     where find_in_set(menu_code, getMenuChild(#{menuCode}))
+  </update>
+
+  <update id="deleteByPrimaryKey">
+    update sys_menu set is_delete='DELETE'
+    where find_in_set(menu_code, getMenuChild(#{menuCode}))
+  </update>
+
+</mapper>

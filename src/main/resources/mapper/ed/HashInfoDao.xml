@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.et.auditServer.modules.ed.dao.HashInfoDao">
+    <resultMap id="BaseResultMap" type="com.et.auditServer.modules.ed.entity.HashInfo">
+        <id column="hash_id" property="hashId" jdbcType="INTEGER"/>
+        <result column="hash_name" property="hashName" jdbcType="VARCHAR"/>
+        <result column="hash_value" property="hashValue" jdbcType="VARCHAR"/>
+        <result column="hash_type" property="hashType" jdbcType="VARCHAR"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="creater" property="creater" jdbcType="VARCHAR"/>
+        <result column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    hash_id, hash_name, hash_value,hash_type,title, creater, createTime
+    </sql>
+
+
+    <select id="findListPage" resultMap="BaseResultMap" parameterType="java.lang.String">
+        SELECT
+        *
+        FROM ed_hash_info
+        <if test=" hashName != null and  hashName !='' ">
+            where  hash_name like concat(concat("%", #{hashName}), "%") escape '/'
+        </if>
+    </select>
+    
+    <insert id="insert"  useGeneratedKeys="true" keyProperty="hashId" parameterType="com.et.auditServer.modules.ed.entity.HashInfo">
+        insert into ed_hash_info (
+            hash_id, hash_name, hash_value,hash_type,title, creater, createTime
+          )
+        values (
+            #{hashId,jdbcType=INTEGER}, #{hashName,jdbcType=VARCHAR}, #{hashValue,jdbcType=VARCHAR},
+            #{hashType,jdbcType=VARCHAR},#{title,jdbcType=VARCHAR}, #{creater,jdbcType=VARCHAR},
+            #{createTime,jdbcType=TIMESTAMP}
+          )
+    </insert>
+
+    <update id="update" parameterType="com.et.auditServer.modules.ed.entity.HashInfo">
+        update ed_hash_info
+        <set>
+            <if test="hashName != null">
+                hash_name = #{hashName,jdbcType=VARCHAR},
+            </if>
+            <if test="hashValue != null">
+                hash_value = #{hashValue,jdbcType=VARCHAR},
+            </if>
+            <if test="hashType != null">
+                hash_type = #{hashType,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="creater != null">
+                creater = #{creater,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                createTime = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+
+        </set>
+        where hash_id = #{hashId,jdbcType=INTEGER}
+    </update>
+
+    <delete id="deleteById" >
+    	delete from ed_hash_info where hash_id = #{hashId,jdbcType=INTEGER}
+  	</delete>
+
+    <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from ed_hash_info
+        where hash_id = #{hashId,jdbcType=INTEGER}
+        limit 1
+    </select>
+
+
+
+
+</mapper>

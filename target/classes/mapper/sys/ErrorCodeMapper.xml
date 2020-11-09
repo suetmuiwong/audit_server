@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.et.auditServer.modules.sys.cache.errorCode.mapper.ErrorCodeMapper" >
+  <resultMap id="BaseResultMap" type="com.et.auditServer.modules.sys.cache.errorCode.entity.ErrorCode" >
+    <id column="ERRCODE" property="errcode" jdbcType="VARCHAR" />
+    <id column="SYSTEMCODE" property="systemcode" jdbcType="VARCHAR" />
+    <result column="ERRMSG" property="errmsg" jdbcType="VARCHAR" />
+    <result column="OUTCODE" property="outcode" jdbcType="VARCHAR" />
+    <result column="OUTMSG" property="outmsg" jdbcType="VARCHAR" />
+    <result column="ISCONVERT" property="isconvert" jdbcType="CHAR" />
+    <result column="ISVALID" property="isvalid" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ERRCODE, SYSTEMCODE, ERRMSG, OUTCODE, OUTMSG, ISCONVERT, ISVALID
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.et.auditServer.modules.sys.cache.errorCode.entity.ErrorCodeKey" >
+    select
+    <include refid="Base_Column_List" />
+    from sys_para_errcode
+    where ERRCODE = #{errcode,jdbcType=VARCHAR}
+    and SYSTEMCODE = #{systemcode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.et.auditServer.modules.sys.cache.errorCode.entity.ErrorCodeKey" >
+    delete from sys_para_errcode
+    where ERRCODE = #{errcode,jdbcType=VARCHAR}
+    and SYSTEMCODE = #{systemcode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.et.auditServer.modules.sys.cache.errorCode.entity.ErrorCode" >
+    insert into sys_para_errcode (ERRCODE, SYSTEMCODE, ERRMSG,
+    OUTCODE, OUTMSG, ISCONVERT,
+    ISVALID)
+    values (#{errcode,jdbcType=VARCHAR}, #{systemcode,jdbcType=VARCHAR}, #{errmsg,jdbcType=VARCHAR},
+    #{outcode,jdbcType=VARCHAR}, #{outmsg,jdbcType=VARCHAR}, #{isconvert,jdbcType=CHAR},
+    #{isvalid,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.et.auditServer.modules.sys.cache.errorCode.entity.ErrorCode" >
+    insert into sys_para_errcode
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="errcode != null" >
+        ERRCODE,
+      </if>
+      <if test="systemcode != null" >
+        SYSTEMCODE,
+      </if>
+      <if test="errmsg != null" >
+        ERRMSG,
+      </if>
+      <if test="outcode != null" >
+        OUTCODE,
+      </if>
+      <if test="outmsg != null" >
+        OUTMSG,
+      </if>
+      <if test="isconvert != null" >
+        ISCONVERT,
+      </if>
+      <if test="isvalid != null" >
+        ISVALID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="errcode != null" >
+        #{errcode,jdbcType=VARCHAR},
+      </if>
+      <if test="systemcode != null" >
+        #{systemcode,jdbcType=VARCHAR},
+      </if>
+      <if test="errmsg != null" >
+        #{errmsg,jdbcType=VARCHAR},
+      </if>
+      <if test="outcode != null" >
+        #{outcode,jdbcType=VARCHAR},
+      </if>
+      <if test="outmsg != null" >
+        #{outmsg,jdbcType=VARCHAR},
+      </if>
+      <if test="isconvert != null" >
+        #{isconvert,jdbcType=CHAR},
+      </if>
+      <if test="isvalid != null" >
+        #{isvalid,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.et.auditServer.modules.sys.cache.errorCode.entity.ErrorCode" >
+    update sys_para_errcode
+    <set >
+      <if test="errmsg != null" >
+        ERRMSG = #{errmsg,jdbcType=VARCHAR},
+      </if>
+      <if test="outcode != null" >
+        OUTCODE = #{outcode,jdbcType=VARCHAR},
+      </if>
+      <if test="outmsg != null" >
+        OUTMSG = #{outmsg,jdbcType=VARCHAR},
+      </if>
+      <if test="isconvert != null" >
+        ISCONVERT = #{isconvert,jdbcType=CHAR},
+      </if>
+      <if test="isvalid != null" >
+        ISVALID = #{isvalid,jdbcType=CHAR},
+      </if>
+    </set>
+    where ERRCODE = #{errcode,jdbcType=VARCHAR}
+    and SYSTEMCODE = #{systemcode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.et.auditServer.modules.sys.cache.errorCode.entity.ErrorCode" >
+    update sys_para_errcode
+    set ERRMSG = #{errmsg,jdbcType=VARCHAR},
+      OUTCODE = #{outcode,jdbcType=VARCHAR},
+      OUTMSG = #{outmsg,jdbcType=VARCHAR},
+      ISCONVERT = #{isconvert,jdbcType=CHAR},
+      ISVALID = #{isvalid,jdbcType=CHAR}
+    where ERRCODE = #{errcode,jdbcType=VARCHAR}
+      and SYSTEMCODE = #{systemcode,jdbcType=VARCHAR}
+  </update>
+
+  <select id="selectAllErrorCodes" resultMap="BaseResultMap" parameterType="com.et.auditServer.modules.sys.cache.errorCode.entity.ErrorCode" >
+    select
+    <include refid="Base_Column_List" />
+    from sys_para_errcode
+    <where>
+      <if test="isconvert != null and isconvert != '' ">
+        AND ISCONVERT = #{isconvert,jdbcType=CHAR}
+      </if>
+      <if test="isvalid != null and isvalid != '' ">
+        AND ISVALID = #{isvalid,jdbcType=CHAR}
+      </if>
+    </where>
+  </select>
+
+</mapper>

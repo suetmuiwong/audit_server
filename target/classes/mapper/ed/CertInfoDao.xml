@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.et.auditServer.modules.ed.dao.CertInfoDao">
+    <resultMap id="BaseResultMap" type="com.et.auditServer.modules.ed.entity.CertInfo">
+        <id column="cert_id" property="certId" jdbcType="INTEGER"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="manager" property="manager" jdbcType="VARCHAR"/>
+        <result column="creater" property="creater" jdbcType="VARCHAR"/>
+        <result column="executor" property="executor" jdbcType="VARCHAR"/>
+        <result column="executorPhone" property="executorPhone" jdbcType="VARCHAR"/>
+        <result column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="deadline" property="deadline" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="TINYINT"/>
+        <result column="picture" property="picture" jdbcType="VARCHAR"/>
+        <result column="picHash" property="picHash" jdbcType="VARCHAR"/>
+        <result column="transfer" property="transfer" jdbcType="INTEGER"/>
+        <result column="cert_desc" property="certDest" jdbcType="VARCHAR"/>
+        <result column="auditor" property="auditor" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    cert_id, title, cert_desc,manager,executor,executorPhone, deadline, status,  picture,
+    picHash, transfer, auditor, creater,createTime
+    </sql>
+
+
+    <select id="findListPage" resultMap="BaseResultMap" parameterType="java.lang.String">
+        SELECT
+        *
+        FROM ed_cert_info
+        <if test="title != null and  title !='' ">
+            where  title like concat(concat("%", #{title}), "%") escape '/'
+        </if>
+    </select>
+
+
+
+    <insert id="insert"  useGeneratedKeys="true" keyProperty="certId" parameterType="com.et.auditServer.modules.ed.entity.CertInfo">
+        insert into ed_cert_info
+         (
+            cert_id, title, cert_desc,
+            createTime,manager,executor,
+            executorPhone, deadline, status,
+            picture,picHash, transfer,
+            auditor, creater
+        )
+        values (
+          #{certId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{certDesc,jdbcType=VARCHAR},
+          #{createTime,jdbcType=TIMESTAMP},#{manager,jdbcType=VARCHAR}, #{executor,jdbcType=VARCHAR},
+          #{executorPhone,jdbcType=VARCHAR},#{deadline,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER},
+          #{picture,jdbcType=VARCHAR},#{picHash,jdbcType=VARCHAR}, #{transfer,jdbcType=INTEGER},
+          #{auditor,jdbcType=VARCHAR},#{creater,jdbcType=VARCHAR}
+          )
+    </insert>
+
+    <update id="update" parameterType="com.et.auditServer.modules.ed.entity.CertInfo">
+        update ed_cert_info
+        <set>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="certDesc != null">
+                cert_desc = #{certDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                createTime = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="manager != null">
+                manager = #{manager,jdbcType=VARCHAR},
+            </if>
+            <if test="executor != null">
+                executor = #{executor,jdbcType=VARCHAR},
+            </if>
+            <if test="executorPhone != null">
+                executorPhone = #{executorPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="deadline != null">
+                deadline = #{deadline,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="picture != null">
+                picture = #{picture,jdbcType=VARCHAR},
+            </if>
+            <if test="picHash != null">
+                picHash = #{picHash,jdbcType=VARCHAR},
+            </if>
+            <if test="transfer != null">
+                transfer = #{transfer,jdbcType=INTEGER},
+            </if>
+            <if test="auditor != null">
+                auditor = #{auditor,jdbcType=VARCHAR},
+            </if>
+            <if test="creater != null">
+                creater = #{creater,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where cert_id = #{certId,jdbcType=INTEGER}
+    </update>
+
+    <delete id="deleteById" >
+    	delete from ed_cert_info where cert_id = #{certId,jdbcType=INTEGER}
+  	</delete>
+
+    <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from ed_cert_info
+        where cert_id = #{certId,jdbcType=INTEGER}
+        limit 1
+    </select>
+
+
+
+
+</mapper>
