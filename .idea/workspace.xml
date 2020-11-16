@@ -1,7 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6ff9e5-c4ea-4e7f-89e6-d8836f629897" name="Default Changelist" comment="" />
+    <list default="true" id="fc6ff9e5-c4ea-4e7f-89e6-d8836f629897" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/controller/ApprovalRecordInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/ApprovalNodeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/ApprovalRecordInfoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dto/ApprovalNodeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dto/ApprovalRecordInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/entity/ApprovalNodeInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/entity/ApprovalRecordInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/ApprovalNodeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/ApprovalRecordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/impl/ApprovalNodeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/impl/ApprovalRecordServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/sys/controller/ApprovalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/sys/service/ApprovalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ed/ApprovalNodeDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ed/ApprovalRecordInfoDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit_server.sql" beforeDir="false" afterPath="$PROJECT_DIR$/audit_server.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/common/utils/FastDFSClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/common/utils/FastDFSClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/controller/CertInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/controller/CertInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/CertInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/CertInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/ConfInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/ConfInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/entity/CertInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/entity/CertInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/entity/ConfInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/entity/ConfInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/entity/ProjInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/entity/ProjInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/CertInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/CertInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/ConfInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/ConfInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/impl/CertInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/impl/CertInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/impl/ConfInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/impl/ConfInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/sys/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/sys/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/sys/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/sys/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generator/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ed/CertInfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ed/CertInfoDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ed/ConfInfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ed/ConfInfoDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ed/ProjInfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ed/ProjInfoDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/sys/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/sys/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/audit_server.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/et/auditServer/common/utils/FastDFSClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/et/auditServer/common/utils/FastDFSClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generator/generatorConfig.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,15 +89,29 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Project\repository_new" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../Maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="E:\Maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
   </component>
   <component name="ProjectId" id="1jqmnE8wwalzESuAtyNUq7rP0Tj" />
   <component name="ProjectViewState">
@@ -41,7 +119,6 @@
     <option name="autoscrollToSource" value="true" />
     <option name="foldersAlwaysOnTop" value="false" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
@@ -50,13 +127,22 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper/ed" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.47241378" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -73,6 +159,7 @@
       <recent name="com.et.auditServer.modules.ed.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IntelliJIDEA\QKL\src\main\resources\mapper\ed" />
       <recent name="$PROJECT_DIR$/src/main/resources/mapper/ed" />
     </key>
   </component>
@@ -97,29 +184,61 @@
       <updated>1604540160175</updated>
       <workItem from="1604540161619" duration="18127000" />
       <workItem from="1604628434533" duration="61932000" />
+      <workItem from="1604886643264" duration="4398000" />
+      <workItem from="1604911987682" duration="1319000" />
+      <workItem from="1604968773546" duration="18619000" />
+      <workItem from="1604995872713" duration="5353000" />
+      <workItem from="1605054846144" duration="11850000" />
+      <workItem from="1605141519520" duration="12649000" />
+      <workItem from="1605227618653" duration="23162000" />
+      <workItem from="1605486392762" duration="25821000" />
+      <workItem from="1605538820844" duration="4112000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="115" key="#SQL_Dialects" timestamp="1604744942058">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#SQL_Dialects/0.0.1440.900@0.0.1440.900" timestamp="1604744942057" />
-    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604541095182">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="333" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604998111965">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1604541095182" />
-    <state x="533" y="141" key="#com.intellij.ide.util.MemberChooser" timestamp="1604849674274">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="333" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1604998111965" />
+    <state x="555" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1605542555728">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="533" y="141" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1604849674274" />
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604743020470">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="555" y="150" key="#com.intellij.ide.util.MemberChooser/0.0.1500.960@0.0.1500.960" timestamp="1605542555728" />
+    <state x="385" y="403" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1605055656429">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="385" y="403" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1500.960@0.0.1500.960" timestamp="1605055656429" />
+    <state x="528" y="347" width="444" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604989080100">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="528" y="347" width="444" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1500.960@0.0.1500.960" timestamp="1604989080100" />
+    <state x="477" y="218" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605060185919">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1604743020470" />
+    <state x="477" y="218" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1500.960@0.0.1500.960" timestamp="1605060185919" />
     <state x="272" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog" timestamp="1604653488920">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -128,58 +247,83 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="217" height="466" key="DebuggerActiveHint/0.0.1440.900@0.0.1440.900" timestamp="1604774511362" />
-    <state width="1398" height="388" key="GridCell.Tab.0.bottom" timestamp="1604851232270">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="659" y="224" key="FileChooserDialogImpl" timestamp="1604973561664">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="659" y="224" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1604973561664" />
+    <state width="1458" height="275" key="GridCell.Tab.0.bottom" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604851232270" />
-    <state width="1398" height="388" key="GridCell.Tab.0.center" timestamp="1604851232269">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state width="1458" height="275" key="GridCell.Tab.0.center" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1604851232269" />
-    <state width="1398" height="388" key="GridCell.Tab.0.left" timestamp="1604851232269">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state width="1458" height="275" key="GridCell.Tab.0.left" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1604851232269" />
-    <state width="1398" height="388" key="GridCell.Tab.0.right" timestamp="1604851232270">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state width="1458" height="275" key="GridCell.Tab.0.right" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1604851232270" />
-    <state width="1398" height="388" key="GridCell.Tab.1.bottom" timestamp="1604851232273">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state width="1458" height="275" key="GridCell.Tab.1.bottom" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604851232273" />
-    <state width="1398" height="388" key="GridCell.Tab.1.center" timestamp="1604851232271">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state width="1458" height="275" key="GridCell.Tab.1.center" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1604851232271" />
-    <state width="1398" height="388" key="GridCell.Tab.1.left" timestamp="1604851232271">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state width="1458" height="275" key="GridCell.Tab.1.left" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1604851232271" />
-    <state width="1398" height="388" key="GridCell.Tab.1.right" timestamp="1604851232272">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state width="1458" height="275" key="GridCell.Tab.1.right" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1604851232272" />
-    <state width="1398" height="388" key="GridCell.Tab.2.bottom" timestamp="1604851232274">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state width="1458" height="275" key="GridCell.Tab.2.bottom" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604851232274" />
-    <state width="1398" height="388" key="GridCell.Tab.2.center" timestamp="1604851232274">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.2.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state width="1458" height="275" key="GridCell.Tab.2.center" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1604851232274" />
-    <state width="1398" height="388" key="GridCell.Tab.2.left" timestamp="1604851232273">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.2.center/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state width="1458" height="275" key="GridCell.Tab.2.left" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1604851232273" />
-    <state width="1398" height="388" key="GridCell.Tab.2.right" timestamp="1604851232274">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.2.left/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state width="1458" height="275" key="GridCell.Tab.2.right" timestamp="1605001231822">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1604851232274" />
-    <state x="258" y="112" key="Maven.ArtifactSearchDialog" timestamp="1604744509142">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1458" height="275" key="GridCell.Tab.2.right/0.0.1500.960@0.0.1500.960" timestamp="1605001231822" />
+    <state x="331" y="215" key="IDE.errors.dialog" timestamp="1604978787291">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="331" y="215" key="IDE.errors.dialog/0.0.1500.960@0.0.1500.960" timestamp="1604978787291" />
+    <state x="269" y="119" key="Maven.ArtifactSearchDialog" timestamp="1604975516008">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="258" y="112" key="Maven.ArtifactSearchDialog/0.0.1440.900@0.0.1440.900" timestamp="1604744509142" />
+    <state x="269" y="119" key="Maven.ArtifactSearchDialog/0.0.1500.960@0.0.1500.960" timestamp="1604975516008" />
+    <state x="252" y="125" key="SettingsEditor" timestamp="1604979442342">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="252" y="125" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1604979442342" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1604656611182">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -188,17 +332,27 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1604825759990" />
-    <state x="273" y="238" width="816" height="550" key="find.popup" timestamp="1604851183827">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="481" y="240" key="extract.method.dialog" timestamp="1605520709843">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="481" y="240" key="extract.method.dialog/0.0.1500.960@0.0.1500.960" timestamp="1605520709843" />
+    <state x="434" y="148" width="850" height="587" key="find.popup" timestamp="1605064421247">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="273" y="238" width="816" height="550" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1604851183827" />
+    <state x="434" y="148" width="850" height="587" key="find.popup/0.0.1500.960@0.0.1500.960" timestamp="1605064421247" />
     <state x="482" y="74" key="refactoring.ChangeSignatureDialog" timestamp="1604825377295">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="482" y="74" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1604825377295" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604765387743">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="413" y="226" key="run.anything.popup" timestamp="1605539365581">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="413" y="226" key="run.anything.popup/0.0.1500.960@0.0.1500.960" timestamp="1605539365581" />
+    <state x="403" y="211" width="698" height="722" key="search.everywhere.popup" timestamp="1605509158807">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604765387743" />
+    <state x="403" y="211" width="698" height="722" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1605509158807" />
   </component>
 </project>

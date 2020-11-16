@@ -12,5 +12,6 @@ public interface ConfInfoDao extends CrudDao<ConfInfo>{
     int deleteById(@Param("confId") int confId);
     List<ConfInfoDao> findListPage(String allDataUser, @Param("title") String title);
     ConfInfo selectById(@Param("confId") int confId);
-
+    List<ConfInfoDao> ConfInfoList (@Param("projId") int projId);
+    List<ConfInfoDao> executorConfInfoList (@Param("executor") String executor);
 }

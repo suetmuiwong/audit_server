@@ -2,7 +2,9 @@ package com.et.auditServer.modules.ed.entity;
 
 import com.et.auditServer.common.persistence.DataEntity;
 
+import javax.validation.constraints.AssertTrue;
 import java.util.Date;
+import java.util.List;
 
 public class ProjInfo extends DataEntity<ProjInfo> {
     private int projId;
@@ -18,6 +20,8 @@ public class ProjInfo extends DataEntity<ProjInfo> {
     private String officeManager;
     private String creater;
     private Date createTime;
+    private List<CertInfo> CertList;
+    private List<ConfInfo> ConfList;
 
     public int getProjId() {
         return projId;
@@ -122,4 +126,22 @@ public class ProjInfo extends DataEntity<ProjInfo> {
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
+
+    public List<CertInfo> getCertList() {
+        return CertList;
+    }
+
+    public void setCertList(List<CertInfo> CertList) {
+        this.CertList = CertList;
+    }
+
+    public List<ConfInfo> getConfList() {
+        return ConfList;
+    }
+
+    public void setConfList(List<ConfInfo> ConfList) {
+        this.ConfList = ConfList;
+    }
+
+
 }

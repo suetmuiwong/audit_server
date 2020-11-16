@@ -16,6 +16,9 @@
         <result column="transfer" property="transfer" jdbcType="INTEGER"/>
         <result column="cert_desc" property="certDest" jdbcType="VARCHAR"/>
         <result column="auditor" property="auditor" jdbcType="VARCHAR"/>
+        <result column="auditor" property="auditor" jdbcType="VARCHAR"/>
+        <result column="node" property="node" jdbcType="INTEGER"/>
+        <result column="proj_Id" property="projId" jdbcType="INTEGER"/>
     </resultMap>
     <sql id="Base_Column_List">
     cert_id, title, cert_desc,manager,executor,executorPhone, deadline, status,  picture,
@@ -110,7 +113,11 @@
         limit 1
     </select>
 
+    <select id="CertInfoList" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select * from ed_cert_info where proj_Id = #{projId,jdbcType=INTEGER}
+    </select>
 
-
-
+    <select id="executorCertInfoList" resultMap="BaseResultMap" parameterType="java.lang.VARCHAR">
+        select * from ed_cert_info where executor = #{executor,jdbcType=INTEGER}
+    </select>
 </mapper>

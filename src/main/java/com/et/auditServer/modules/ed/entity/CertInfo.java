@@ -22,11 +22,13 @@ public class CertInfo extends DataEntity<CertInfo> {
     private int transfer;
     private String certDest;
     private String auditor;
+    private int projId;
+    private int node;
+
 
     public int getCertId() {
         return certId;
     }
-
     public void setCertId(int certId) {
         this.certId = certId;
     }
@@ -34,7 +36,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public String getTitle() {
         return title;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }
@@ -42,7 +43,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public String getCertDesc() {
         return certDesc;
     }
-
     public void setCertDesc(String certDesc) {
         this.certDesc = certDesc;
     }
@@ -50,7 +50,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public String getManager() {
         return manager;
     }
-
     public void setManager(String manager) {
         this.manager = manager;
     }
@@ -58,7 +57,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public String getCreater() {
         return creater;
     }
-
     public void setCreater(String creater) {
         this.creater = creater;
     }
@@ -66,7 +64,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public String getExecutor() {
         return executor;
     }
-
     public void setExecutor(String executor) {
         this.executor = executor;
     }
@@ -74,7 +71,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public String getExecutorPhone() {
         return executorPhone;
     }
-
     public void setExecutorPhone(String executorPhone) {
         this.executorPhone = executorPhone;
     }
@@ -82,7 +78,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public Date getCreateTime() {
         return createTime;
     }
-
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
@@ -90,7 +85,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public String getDeadline() {
         return deadline;
     }
-
     public void setDeadline(String deadline) {
         this.deadline = deadline;
     }
@@ -98,7 +92,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public int getStatus() {
         return status;
     }
-
     public void setStatus(int status) {
         this.status = status;
     }
@@ -106,7 +99,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public String getPicture() {
         return picture;
     }
-
     public void setPicture(String picture) {
         this.picture = picture;
     }
@@ -114,7 +106,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public String getPicHash() {
         return picHash;
     }
-
     public void setPicHash(String picHash) {
         this.picHash = picHash;
     }
@@ -122,7 +113,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public int getTransfer() {
         return transfer;
     }
-
     public void setTransfer(int transfer) {
         this.transfer = transfer;
     }
@@ -130,7 +120,6 @@ public class CertInfo extends DataEntity<CertInfo> {
     public String getCertDest() {
         return certDest;
     }
-
     public void setCertDest(String certDest) {
         this.certDest = certDest;
     }
@@ -138,8 +127,21 @@ public class CertInfo extends DataEntity<CertInfo> {
     public String getAuditor() {
         return auditor;
     }
-
     public void setAuditor(String auditor) {
         this.auditor = auditor;
+    }
+
+    public int getProjId() {
+        return projId;
+    }
+    public void setProjId(int projId) {
+        this.projId = projId;
+    }
+
+    public int getNode() {
+        return node;
+    }
+    public void setNode(int node) {
+        this.node = node;
     }
 }

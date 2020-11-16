@@ -23,11 +23,13 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     private String manager;
     private String managerLeader;
     private String department;
+    private int projId;
+    private int node;
+    private String executor;
 
     public int getConfId() {
         return confId;
     }
-
     public void setConfId(int confId) {
         this.confId = confId;
     }
@@ -35,7 +37,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getTitle() {
         return title;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }
@@ -43,7 +44,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getConfDesc() {
         return confDesc;
     }
-
     public void setConfDesc(String confDesc) {
         this.confDesc = confDesc;
     }
@@ -51,7 +51,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getSummary() {
         return summary;
     }
-
     public void setSummary(String summary) {
         this.summary = summary;
     }
@@ -59,7 +58,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getAuditor() {
         return auditor;
     }
-
     public void setAuditor(String auditor) {
         this.auditor = auditor;
     }
@@ -67,7 +65,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getCreater() {
         return creater;
     }
-
     public void setCreater(String creater) {
         this.creater = creater;
     }
@@ -75,7 +72,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getAudited() {
         return audited;
     }
-
     public void setAudited(String audited) {
         this.audited = audited;
     }
@@ -83,7 +79,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public Date getCreateTime() {
         return createTime;
     }
-
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
@@ -91,7 +86,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public Date getDeadline() {
         return deadline;
     }
-
     public void setDeadline(Date deadline) {
         this.deadline = deadline;
     }
@@ -99,7 +93,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public int getStatus() {
         return status;
     }
-
     public void setStatus(int status) {
         this.status = status;
     }
@@ -107,7 +100,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getPicture() {
         return picture;
     }
-
     public void setPicture(String picture) {
         this.picture = picture;
     }
@@ -115,7 +107,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getPicHash() {
         return picHash;
     }
-
     public void setPicHash(String picHash) {
         this.picHash = picHash;
     }
@@ -123,7 +114,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getReviewer() {
         return reviewer;
     }
-
     public void setReviewer(String reviewer) {
         this.reviewer = reviewer;
     }
@@ -131,7 +121,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public Date getAuditTime() {
         return auditTime;
     }
-
     public void setAuditTime(Date auditTime) {
         this.auditTime = auditTime;
     }
@@ -139,7 +128,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public Date getReviewTime() {
         return reviewTime;
     }
-
     public void setReviewTime(Date reviewTime) {
         this.reviewTime = reviewTime;
     }
@@ -147,7 +135,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getManager() {
         return manager;
     }
-
     public void setManager(String manager) {
         this.manager = manager;
     }
@@ -155,7 +142,6 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getManagerLeader() {
         return managerLeader;
     }
-
     public void setManagerLeader(String managerLeader) {
         this.managerLeader = managerLeader;
     }
@@ -163,8 +149,28 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     public String getDepartment() {
         return department;
     }
-
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public int getProjId() {
+        return projId;
+    }
+    public void setProjId(int projId) {
+        this.projId = projId;
+    }
+
+    public int getNode() {
+        return node;
+    }
+    public void setNode(int node) {
+        this.node = node;
+    }
+
+    public String getExecutor() {
+        return executor;
+    }
+    public void setExecutor(String executor) {
+        this.executor = executor;
     }
 }

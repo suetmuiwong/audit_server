@@ -4,9 +4,9 @@ spring:
     driverClassName: com.mysql.jdbc.Driver
     druid:
       first:  #数据源1
-        url: jdbc:mysql://127.0.0.1:3306/ibs_audit?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
-        username: root
-        password: 1qaz@wsx
+        url: jdbc:mysql://47.94.20.128:3306/ibs_audit?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+        username: ass
+        password: ass
       second:  #数据源2
         url:
         username:
@@ -39,7 +39,7 @@ spring:
   redis:
     open: true  # 是否开启redis缓存  true开启   false关闭
     database: 0
-    host: 127.0.0.1
+    host: 47.94.20.128
     port: 6379
     password:  # 密码（默认为空）
     #sentinel:

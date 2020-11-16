@@ -284,6 +284,64 @@ INSERT INTO `sys_para_errcode` VALUES ('404', '页面未发现', '404', '页面�
 INSERT INTO `sys_para_errcode` VALUES ('405', '请重新登录！', '405', '请重新登录！', 'ZT', '1', '1');
 COMMIT;
 
+
+ALTER TABLE `ed_cert_info`
+ADD COLUMN `proj_Id` int(11) NULL COMMENT '项目ID';
+ALTER TABLE `ed_cert_info`
+ADD COLUMN `node` int(11) NULL COMMENT '节点';
+
+ALTER TABLE `ed_conf_info`
+ADD COLUMN `proj_Id` int(11) NULL COMMENT '项目ID';
+ALTER TABLE `ed_conf_info`
+ADD COLUMN `node` int(11) NULL COMMENT '节点';
+ALTER TABLE `ed_conf_info`
+ADD COLUMN `executor` varchar(50) NULL COMMENT '执行人';
+
+
+-- ----------------------------
+-- 审批记录表
+-- ----------------------------
+DROP TABLE IF EXISTS `ed_approval_record`;
+
+CREATE TABLE `ed_approval_record` (
+      `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id',
+      `processId` int(11) COMMENT '审批流程ID',
+      `executor` varchar(50) COMMENT '执行人',
+      `stayExecutor` varchar(50) COMMENT '待执行人',
+      `status` int(4) COMMENT '审核状态 0:发起人 1:同意 2:不同意 3:扭转 4:流程结束',
+      `approvalOpinion` varchar(500) COMMENT '审核意见',
+      `attachment` int(11) COMMENT '附件',
+      `approvalDate` datetime COMMENT '审核时间',
+      `category` varchar(50) COMMENT '类别:存证信息或者确认单',
+      `creater` varchar(50) COMMENT '创建者',
+      `createTime` datetime COMMENT '创建时间',
+      `updates` varchar(50) COMMENT '更新者',
+      `updateTime` datetime COMMENT '更新时间',
+      PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+-- ----------------------------
+-- 审批流程节点
+-- ----------------------------
+
+DROP TABLE IF EXISTS `ed_approval_node`;
+
+CREATE TABLE `ed_approval_node` (
+      `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id',
+      `processId` int(11) COMMENT '审批流程ID',
+      `upNode` varchar(50) COMMENT '上个节点',
+      `nextNode` varchar(50) COMMENT '下个节点',
+      `node` int(4) COMMENT '节点',
+      `category` varchar(50) COMMENT '类别:存证信息或者确认单',
+      PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
 -- ----------------------------
 -- Function structure for getMenuChild
 -- ----------------------------

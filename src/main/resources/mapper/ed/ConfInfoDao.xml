@@ -20,10 +20,14 @@
         <result column="manager" property="manager" jdbcType="VARCHAR"/>
         <result column="managerLeader" property="managerLeader" jdbcType="VARCHAR"/>
         <result column="department" property="department" jdbcType="VARCHAR"/>
+        <result column="node" property="node" jdbcType="INTEGER"/>
+        <result column="proj_Id" property="projId" jdbcType="INTEGER"/>
+        <result column="executor" property="executor" jdbcType="VARCHAR"/>
+
     </resultMap>
     <sql id="Base_Column_List">
     conf_id, title, conf_desc, summary, auditor,creater,audited,createTime,deadline, status, picture, picHash,
-    reviewer, auditTime, reviewTime, manager,managerLeader,department
+    reviewer, auditTime, reviewTime, manager,managerLeader,department,node,executor,proj_Id
     </sql>
 
 
@@ -107,6 +111,15 @@
             <if test="department != null">
                 department = #{department,jdbcType=VARCHAR}
             </if>
+            <if test="projId != null">
+                proj_Id = #{projId,jdbcType=INTEGER},
+            </if>
+            <if test="node != null">
+                node = #{node,jdbcType=INTEGER},
+            </if>
+            <if test="executor != null">
+                executor = #{executor,jdbcType=VARCHAR}
+            </if>
 
         </set>
         where conf_id = #{confId,jdbcType=INTEGER}
@@ -124,7 +137,12 @@
         limit 1
     </select>
 
+    <select id="CertInfoList" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select * from ed_cert_info where proj_Id = #{projId,jdbcType=INTEGER}
+    </select>
 
-
+    <select id="executorCertInfoList" resultMap="BaseResultMap" parameterType="java.lang.VARCHAR">
+        select * from ed_cert_info where executor = #{executor,jdbcType=INTEGER}
+    </select>
 
 </mapper>
