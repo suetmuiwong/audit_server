@@ -6,8 +6,11 @@ import com.et.auditServer.common.utils.JsonResult;
 import com.et.auditServer.modules.ed.dao.ConfInfoDao;
 import com.et.auditServer.modules.ed.dao.ProjInfoDao;
 import com.et.auditServer.modules.ed.dto.*;
+import com.et.auditServer.modules.ed.entity.CertInfo;
 import com.et.auditServer.modules.ed.entity.ConfInfo;
 import com.et.auditServer.modules.ed.entity.ProjInfo;
+import com.et.auditServer.modules.ed.service.ApprovalNodeInfoService;
+import com.et.auditServer.modules.ed.service.ApprovalRecordInfoService;
 import com.et.auditServer.modules.ed.service.ConfInfoService;
 import com.et.auditServer.modules.ed.service.ProjInfoService;
 import com.et.auditServer.modules.sys.cache.UserUtils;
@@ -17,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -24,6 +28,11 @@ public class ConfInfoServiceImpl extends CrudService<ConfInfoDao, ConfInfo> impl
 
     @Autowired
     private UserUtils userUtils;
+    @Autowired
+    private ApprovalRecordInfoService approvalRecordInfoService;
+    @Autowired
+    private ApprovalNodeInfoService approvalNodeInfoService;
+
 
     /**
      * 分页查询
@@ -57,7 +66,34 @@ public class ConfInfoServiceImpl extends CrudService<ConfInfoDao, ConfInfo> impl
     @Override
     @Transactional(readOnly = false)
     public JsonResult insert(AddConfInfoDTO addConfInfoDTO) {
-        dao.insert(addConfInfoDTO);
+
+        //设置执行节点
+        addConfInfoDTO.setNode(1);
+        addConfInfoDTO.setExecutor(addConfInfoDTO.getManager());
+        int confId = dao.insert(addConfInfoDTO);
+
+        //新增确认单审批记录
+        ApprovalRecordInfoDTO approvalRecordInfoDTO = new ApprovalRecordInfoDTO();
+        approvalRecordInfoDTO.setProcessId(confId);
+        approvalRecordInfoDTO.setExecutor(addConfInfoDTO.getCreater());
+        approvalRecordInfoDTO.setStayExecutor(addConfInfoDTO.getManager());
+        approvalRecordInfoDTO.setStatus(0);
+        approvalRecordInfoDTO.setApprovalOpinion("发起人");
+        approvalRecordInfoDTO.setApprovalDate(new Date());
+        approvalRecordInfoDTO.setCategory("Conf");
+        approvalRecordInfoDTO.setCreater(addConfInfoDTO.getCreater());
+        approvalRecordInfoDTO.setCreatedDate(new Date());
+        approvalRecordInfoService.insert(approvalRecordInfoDTO);
+
+        //添加审批节点
+        ApprovalNodeInfoDTO approvalNodeInfoDTO = new ApprovalNodeInfoDTO();
+        approvalNodeInfoDTO.setProcessId(confId);
+        approvalNodeInfoDTO.setUpNode(addConfInfoDTO.getCreater());
+        approvalNodeInfoDTO.setNextNode(addConfInfoDTO.getManager());
+        approvalNodeInfoDTO.setNode(0);
+        approvalNodeInfoDTO.setCategory("Conf");
+        approvalNodeInfoService.insert(approvalNodeInfoDTO);
+
         ConfInfo confInfo = new ConfInfo();
         confInfo.setConfId(addConfInfoDTO.getConfId());
         logger.info("新增信息成功");
@@ -92,6 +128,9 @@ public class ConfInfoServiceImpl extends CrudService<ConfInfoDao, ConfInfo> impl
         return JsonResult.success(confInfo);
     }
 
-
+    @Override
+    public ConfInfo confInfo(int confId) {
+        return dao.selectById(confId);
+    }
 
 }

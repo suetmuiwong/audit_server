@@ -22,6 +22,8 @@ public class CertInfo extends DataEntity<CertInfo> {
     private int transfer;
     private String certDest;
     private String auditor;
+    private int projId;
+    private int node;
 
     public int getCertId() {
         return certId;
@@ -141,5 +143,21 @@ public class CertInfo extends DataEntity<CertInfo> {
 
     public void setAuditor(String auditor) {
         this.auditor = auditor;
+    }
+
+    public int getProjId() {
+        return projId;
+    }
+
+    public void setProjId(int projId) {
+        this.projId = projId;
+    }
+
+    public int getNode() {
+        return node;
+    }
+
+    public void setNode(int node) {
+        this.node = node;
     }
 }

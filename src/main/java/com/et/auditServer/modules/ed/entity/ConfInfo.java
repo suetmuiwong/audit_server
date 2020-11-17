@@ -23,6 +23,10 @@ public class ConfInfo extends DataEntity<ConfInfo> {
     private String manager;
     private String managerLeader;
     private String department;
+    private int projId;
+    private int node;
+    private String executor;
+
 
     public int getConfId() {
         return confId;
@@ -166,5 +170,26 @@ public class ConfInfo extends DataEntity<ConfInfo> {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public int getProjId() {
+        return projId;
+    }
+    public void setProjId(int projId) {
+        this.projId = projId;
+    }
+
+    public int getNode() {
+        return node;
+    }
+    public void setNode(int node) {
+        this.node = node;
+    }
+
+    public String getExecutor() {
+        return executor;
+    }
+    public void setExecutor(String executor) {
+        this.executor = executor;
     }
 }

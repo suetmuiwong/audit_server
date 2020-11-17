@@ -13,5 +13,6 @@ public interface CertInfoDao extends CrudDao<CertInfo>{
     int deleteById(@Param("certId") int certId);
     List<CertInfoDTO> findListPage(String allDataUser, @Param("title") String title);
     CertInfo selectById(@Param("certId") int certId);
-
+    List<CertInfoDTO> findProjIdList (@Param("projId") int projId);
+    List<CertInfoDTO> findExecutorList (@Param("executor") String executor);
 }

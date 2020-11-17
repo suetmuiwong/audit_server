@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.et.auditServer.modules.ed.dao.ApprovalRecordInfoDao">
+    <resultMap id="BaseResultMap" type="com.et.auditServer.modules.ed.entity.ApprovalRecordInfo">
+        <id column="Id" property="Id" jdbcType="INTEGER"/>
+        <result column="processId" property="processId" jdbcType="INTEGER"/>
+        <result column="executor" property="executor" jdbcType="VARCHAR"/>
+        <result column="stayExecutor" property="stayExecutor" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="TINYINT"/>
+        <result column="approvalOpinion" property="approvalOpinion" jdbcType="VARCHAR"/>
+        <result column="attachment" property="attachment" jdbcType="INTEGER"/>
+        <result column="approvalDate" property="approvalDate" jdbcType="TIMESTAMP"/>
+        <result column="category" property="category" jdbcType="VARCHAR"/>
+        <result column="creater" property="creater" jdbcType="VARCHAR"/>
+        <result column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="updates" property="updates" jdbcType="VARCHAR"/>
+        <result column="updateTime" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="insert"  useGeneratedKeys="true" keyProperty="Id" parameterType="com.et.auditServer.modules.ed.entity.ApprovalRecordInfo">
+        insert into ed_approvalRecord_info
+         (
+            Id,
+            processId,
+            executor,
+            stayExecutor,
+            status,
+            approvalOpinion,
+            attachment,
+            approvalDate,
+            category,
+            creater,
+            createTime,
+            updates,
+            updateTime
+        )
+        values (
+          #{Id,jdbcType=INTEGER},
+          #{processId,jdbcType=INTEGER},
+          #{executor,jdbcType=VARCHAR},
+          #{stayExecutor,jdbcType=VARCHAR},
+          #{status,jdbcType=INTEGER},
+          #{approvalOpinion,jdbcType=VARCHAR},
+          #{attachment,jdbcType=INTEGER},
+          #{approvalDate,jdbcType=TIMESTAMP},
+          #{category,jdbcType=VARCHAR},
+          #{creater,jdbcType=VARCHAR},
+          #{createTime,jdbcType=TIMESTAMP},
+          #{updates,jdbcType=VARCHAR},
+          #{updateTime,jdbcType=TIMESTAMP}
+          )
+    </insert>
+
+    <select id="selectApprovalRecordList" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select *
+        from ed_approvalRecord_info
+        where processId = #{processId,jdbcType=INTEGER} and category = #{category,jdbcType=VARCHAR}
+        order by approvalDate DESC
+    </select>
+
+    <delete id="deleteById" >
+    	delete from ed_approvalRecord_info where processId = #{processId,jdbcType=INTEGER} and category = #{category,jdbcType=VARCHAR}
+  	</delete>
+
+</mapper>

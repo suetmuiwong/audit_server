@@ -124,6 +124,13 @@
         limit 1
     </select>
 
+    <select id="selectConfInfoList" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select * from ed_conf_info where proj_Id = #{projId,jdbcType=INTEGER}
+    </select>
+
+    <select id="selectExecutorConfInfoList" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select * from ed_conf_info where executor = #{executor,jdbcType=INTEGER}
+    </select>
 
 
 

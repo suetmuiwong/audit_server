@@ -19,9 +19,8 @@
     </resultMap>
     <sql id="Base_Column_List">
     cert_id, title, cert_desc,manager,executor,executorPhone, deadline, status,  picture,
-    picHash, transfer, auditor, creater,createTime
+    picHash, transfer, auditor, creater,createTime,projId,node
     </sql>
-
 
     <select id="findListPage" resultMap="BaseResultMap" parameterType="java.lang.String">
         SELECT
@@ -32,8 +31,6 @@
         </if>
     </select>
 
-
-
     <insert id="insert"  useGeneratedKeys="true" keyProperty="certId" parameterType="com.et.auditServer.modules.ed.entity.CertInfo">
         insert into ed_cert_info
          (
@@ -41,14 +38,14 @@
             createTime,manager,executor,
             executorPhone, deadline, status,
             picture,picHash, transfer,
-            auditor, creater
+            auditor, creater, projId,node
         )
         values (
           #{certId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{certDesc,jdbcType=VARCHAR},
           #{createTime,jdbcType=TIMESTAMP},#{manager,jdbcType=VARCHAR}, #{executor,jdbcType=VARCHAR},
           #{executorPhone,jdbcType=VARCHAR},#{deadline,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER},
           #{picture,jdbcType=VARCHAR},#{picHash,jdbcType=VARCHAR}, #{transfer,jdbcType=INTEGER},
-          #{auditor,jdbcType=VARCHAR},#{creater,jdbcType=VARCHAR}
+          #{auditor,jdbcType=VARCHAR},#{creater,jdbcType=VARCHAR},#{projId,jdbcType=INTEGER},#{node,jdbcType=INTEGER}
           )
     </insert>
 
@@ -94,6 +91,12 @@
             <if test="creater != null">
                 creater = #{creater,jdbcType=VARCHAR}
             </if>
+            <if test="projId != null">
+                projId = #{projId,jdbcType=VARCHAR},
+            </if>
+            <if test="node != null">
+                node = #{node,jdbcType=INTEGER}
+            </if>
         </set>
         where cert_id = #{certId,jdbcType=INTEGER}
     </update>
@@ -110,7 +113,19 @@
         limit 1
     </select>
 
+    <select id="findProjIdList" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        SELECT
+        *
+        FROM ed_cert_info
+        where projId = #{projId,jdbcType=INTEGER}
+    </select>
 
+    <select id="findExecutorList" resultMap="BaseResultMap" parameterType="java.lang.String">
+        SELECT
+        *
+        FROM ed_cert_info
+        where executor = #{executor,jdbcType=INTEGER}
+    </select>
 
 
 </mapper>

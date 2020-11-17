@@ -5,8 +5,12 @@ import com.et.auditServer.common.service.CrudService;
 import com.et.auditServer.common.utils.JsonResult;
 import com.et.auditServer.modules.ed.dao.CertInfoDao;
 import com.et.auditServer.modules.ed.dto.AddCertInfoDTO;
+import com.et.auditServer.modules.ed.dto.ApprovalNodeInfoDTO;
+import com.et.auditServer.modules.ed.dto.ApprovalRecordInfoDTO;
 import com.et.auditServer.modules.ed.dto.CertInfoDTO;
 import com.et.auditServer.modules.ed.entity.CertInfo;
+import com.et.auditServer.modules.ed.service.ApprovalNodeInfoService;
+import com.et.auditServer.modules.ed.service.ApprovalRecordInfoService;
 import com.et.auditServer.modules.ed.service.CertInfoService;
 import com.et.auditServer.modules.sys.cache.UserUtils;
 import com.github.pagehelper.PageHelper;
@@ -15,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -22,6 +27,10 @@ public class CertInfoServiceImpl extends CrudService<CertInfoDao, CertInfo> impl
 
     @Autowired
     private UserUtils userUtils;
+    @Autowired
+    private ApprovalRecordInfoService approvalRecordInfoService;
+    @Autowired
+    private ApprovalNodeInfoService approvalNodeInfoService;
     /**
      * 分页查询
      */
@@ -53,7 +62,32 @@ public class CertInfoServiceImpl extends CrudService<CertInfoDao, CertInfo> impl
     @Override
     @Transactional(readOnly = false)
     public JsonResult insert(AddCertInfoDTO addCertInfoDTO) {
-        dao.insert(addCertInfoDTO);
+        //设置执行节点
+        addCertInfoDTO.setNode(1);
+        int certId = dao.insert(addCertInfoDTO);
+
+        //新增审批记录
+        ApprovalRecordInfoDTO approvalRecordInfoDTO = new ApprovalRecordInfoDTO();
+        approvalRecordInfoDTO.setProcessId(certId);
+        approvalRecordInfoDTO.setExecutor(addCertInfoDTO.getCreater());
+        approvalRecordInfoDTO.setStayExecutor(addCertInfoDTO.getExecutor());
+        approvalRecordInfoDTO.setStatus(0);
+        approvalRecordInfoDTO.setApprovalOpinion("发起人");
+        approvalRecordInfoDTO.setApprovalDate(new Date());
+        approvalRecordInfoDTO.setCategory("Cert");
+        approvalRecordInfoDTO.setCreater(addCertInfoDTO.getCreater());
+        approvalRecordInfoDTO.setCreateTime(new Date());
+        approvalRecordInfoService.insert(approvalRecordInfoDTO);
+
+        //新增节点
+        ApprovalNodeInfoDTO approvalNodeInfoDTO = new ApprovalNodeInfoDTO();
+        approvalNodeInfoDTO.setProcessId(certId);
+        approvalNodeInfoDTO.setUpNode(addCertInfoDTO.getCreater());
+        approvalNodeInfoDTO.setNextNode(addCertInfoDTO.getExecutor());
+        approvalNodeInfoDTO.setNode(0);
+        approvalNodeInfoDTO.setCategory("Cert");
+        approvalNodeInfoService.insert(approvalNodeInfoDTO);
+
         CertInfo certInfo = new CertInfo();
         certInfo.setCertId(addCertInfoDTO.getCertId());
         logger.info("新增存证信息成功");
@@ -82,5 +116,10 @@ public class CertInfoServiceImpl extends CrudService<CertInfoDao, CertInfo> impl
         certInfo.setCertId(certId);
         logger.info("删除存证信息成功");
         return JsonResult.success(certInfo);
+    }
+
+    @Override
+    public CertInfo certInfo(int CertId) {
+        return dao.selectById(CertId);
     }
 }

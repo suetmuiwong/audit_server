@@ -1,8 +1,8 @@
 package com.et.auditServer.common.utils;
 
-import org.csource.common.MyException;
-import org.csource.common.NameValuePair;
-import org.csource.fastdfs.*;
+//import org.csource.common.MyException;
+//import org.csource.common.NameValuePair;
+//import org.csource.fastdfs.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,7 +10,7 @@ import java.io.*;
 import java.security.NoSuchAlgorithmException;
 
 public class FastDFSClient {
-
+/**
     private static final Logger logger = LoggerFactory.getLogger(FastDFSClient.class);
     private static TrackerClient trackerClient;
     private static TrackerServer trackerServer;
@@ -36,6 +36,7 @@ public class FastDFSClient {
             logger.error("FastDFS Client Init Fail!",e);
         }
     }*/
+/**
     //上传
     public static String[] upload(FastDFSFile file) {
         logger.info("File Name: " + file.getName() + "File Length:" + file.getContent().length);
@@ -109,6 +110,7 @@ public class FastDFSClient {
      5      * @param httpSecretKey 密钥
      6      * @return 返回token，如： token=078d370098b03e9020b82c829c205e1f&ts=1508141521
      7      */
+/**
       public static String getToken(String filepath, String httpSecretKey){
            // unix seconds
            int ts = (int) (System.currentTimeMillis() / 1000);
@@ -130,6 +132,6 @@ public class FastDFSClient {
 
            return sb.toString();
       }
-
+*/
 
 }
