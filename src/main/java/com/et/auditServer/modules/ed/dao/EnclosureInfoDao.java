@@ -16,5 +16,5 @@ public interface EnclosureInfoDao extends CrudDao<EnclosureInfo> {
     /**
      * 根据Id查询附件
      */
-    List<EnclosureInfoDTO> selectById(@Param("Id") int Id);
+    EnclosureInfo selectById(@Param("Id") int Id);
 }

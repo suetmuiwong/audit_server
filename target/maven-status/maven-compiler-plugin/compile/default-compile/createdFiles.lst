@@ -51,6 +51,7 @@ com\et\auditServer\common\exception\BaseException.class
 com\et\auditServer\datasources\aspect\DataSourceAspect.class
 com\et\auditServer\modules\ed\dto\AddHashInfoDTO.class
 com\et\auditServer\modules\sys\entity\MenuTreeSort.class
+com\et\auditServer\modules\ed\service\EnclosureInfoService.class
 com\et\auditServer\modules\sys\controller\PlatformController.class
 com\et\auditServer\modules\ed\entity\EnclosureInfo.class
 com\et\auditServer\modules\ed\dto\AddConfInfoDTO.class
@@ -93,6 +94,7 @@ com\et\auditServer\common\exception\TimeoutException.class
 com\et\auditServer\modules\ed\dto\HashInfoDTO.class
 com\et\auditServer\common\persistence\BaseEntity.class
 com\et\auditServer\common\utils\StringUtil.class
+com\et\auditServer\modules\ed\service\impl\EnclosureInfoServiceImpl.class
 com\et\auditServer\modules\sys\entity\MenuViewMode.class
 com\et\auditServer\modules\sys\annotation\UpdateUserPermissions.class
 com\et\auditServer\modules\sys\dao\MenuViewPermissionsDao.class
