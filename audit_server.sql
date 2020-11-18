@@ -301,9 +301,9 @@ ADD COLUMN `executor` varchar(50) NULL COMMENT '执行人';
 -- ----------------------------
 -- 审批记录表
 -- ----------------------------
-DROP TABLE IF EXISTS `ed_approval_record`;
+DROP TABLE IF EXISTS `ed_approvalRecord_info`;
 
-CREATE TABLE `ed_approval_record` (
+CREATE TABLE `ed_approvalRecord_info` (
       `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id',
       `processId` int(11) COMMENT '审批流程ID',
       `executor` varchar(50) COMMENT '执行人',
@@ -324,9 +324,9 @@ CREATE TABLE `ed_approval_record` (
 -- 审批流程节点
 -- ----------------------------
 
-DROP TABLE IF EXISTS `ed_approval_node`;
+DROP TABLE IF EXISTS `ed_approvalNode_info`;
 
-CREATE TABLE `ed_approval_node` (
+CREATE TABLE `ed_approvalNode_info` (
       `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id',
       `processId` int(11) COMMENT '审批流程ID',
       `upNode` varchar(50) COMMENT '上个节点',
@@ -336,6 +336,21 @@ CREATE TABLE `ed_approval_node` (
       PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- ----------------------------
+-- 上传附件
+-- ----------------------------
+
+DROP TABLE IF EXISTS `ed_enclosure_info`;
+
+CREATE TABLE `ed_enclosure_info` (
+     `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id',
+     `EnclosureName` int(50) COMMENT '附件名称',
+     `Path` varchar(500) COMMENT '附件路径',
+     `ExpandedName` varchar(50) COMMENT '附件扩展名',
+     `creater` varchar(50) COMMENT '上传者',
+     `createTime` datetime COMMENT '上传时间',
+     PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 

@@ -19,9 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6ff9e5-c4ea-4e7f-89e6-d8836f629897" name="Default Changelist" comment="删除原先审核业务类">
+    <list default="true" id="fc6ff9e5-c4ea-4e7f-89e6-d8836f629897" name="Default Changelist" comment="添加审批相关表的列备注">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/EnclosureInfoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/entity/EnclosureInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ed/EnclosureInfoDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audit_server.sql" beforeDir="false" afterPath="$PROJECT_DIR$/audit_server.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IbsAudit.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/IbsAudit.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/IbsAudit.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/IbsAudit.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +95,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper/ed" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -109,10 +115,10 @@
       <recent name="com.et.auditServer.modules.ed.service.impl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.et.auditServer.modules.ed.dao" />
       <recent name="com.et.auditServer.modules.ed.controller" />
       <recent name="com.et.auditServer.modules.ed.service.impl" />
       <recent name="com.et.auditServer.modules.ed.service" />
-      <recent name="com.et.auditServer.modules.ed.dao" />
       <recent name="com.et.auditServer.modules.ed.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -146,7 +152,7 @@
       <workItem from="1604968773546" duration="7674000" />
       <workItem from="1605623558900" duration="4602000" />
       <workItem from="1605659681028" duration="52000" />
-      <workItem from="1605663968443" duration="986000" />
+      <workItem from="1605663968443" duration="3670000" />
     </task>
     <task id="LOCAL-00001" summary="删除原先审核业务类">
       <created>1605664178216</created>
@@ -155,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605664178216</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加审批相关表的列备注">
+      <created>1605665064352</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605665064352</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +188,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="删除原先审核业务类" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除原先审核业务类" />
+    <MESSAGE value="添加审批相关表的列备注" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加审批相关表的列备注" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="115" key="#SQL_Dialects" timestamp="1604744942058">
@@ -209,66 +223,66 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="659" y="224" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1605623600401" />
-    <state width="1458" height="223" key="GridCell.Tab.0.bottom" timestamp="1605664548972">
+    <state width="1458" height="241" key="GridCell.Tab.0.bottom" timestamp="1605666938296">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604851232270" />
-    <state width="1458" height="223" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605664548972" />
-    <state width="1458" height="223" key="GridCell.Tab.0.center" timestamp="1605664548965">
+    <state width="1458" height="241" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605666938296" />
+    <state width="1458" height="241" key="GridCell.Tab.0.center" timestamp="1605666938295">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1604851232269" />
-    <state width="1458" height="223" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1605664548965" />
-    <state width="1458" height="223" key="GridCell.Tab.0.left" timestamp="1605664548965">
+    <state width="1458" height="241" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1605666938295" />
+    <state width="1458" height="241" key="GridCell.Tab.0.left" timestamp="1605666938295">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1604851232269" />
-    <state width="1458" height="223" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1605664548965" />
-    <state width="1458" height="223" key="GridCell.Tab.0.right" timestamp="1605664548972">
+    <state width="1458" height="241" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1605666938295" />
+    <state width="1458" height="241" key="GridCell.Tab.0.right" timestamp="1605666938296">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1604851232270" />
-    <state width="1458" height="223" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1605664548972" />
-    <state width="1458" height="223" key="GridCell.Tab.1.bottom" timestamp="1605664548973">
+    <state width="1458" height="241" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1605666938296" />
+    <state width="1458" height="241" key="GridCell.Tab.1.bottom" timestamp="1605666937997">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604851232273" />
-    <state width="1458" height="223" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605664548973" />
-    <state width="1458" height="223" key="GridCell.Tab.1.center" timestamp="1605664548973">
+    <state width="1458" height="241" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605666937997" />
+    <state width="1458" height="241" key="GridCell.Tab.1.center" timestamp="1605666937997">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1604851232271" />
-    <state width="1458" height="223" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1605664548973" />
-    <state width="1458" height="223" key="GridCell.Tab.1.left" timestamp="1605664548973">
+    <state width="1458" height="241" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1605666937997" />
+    <state width="1458" height="241" key="GridCell.Tab.1.left" timestamp="1605666937997">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1604851232271" />
-    <state width="1458" height="223" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1605664548973" />
-    <state width="1458" height="223" key="GridCell.Tab.1.right" timestamp="1605664548973">
+    <state width="1458" height="241" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1605666937997" />
+    <state width="1458" height="241" key="GridCell.Tab.1.right" timestamp="1605666937997">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1604851232272" />
-    <state width="1458" height="223" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1605664548973" />
-    <state width="1458" height="241" key="GridCell.Tab.2.bottom" timestamp="1605663284913">
+    <state width="1458" height="241" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1605666937997" />
+    <state width="1458" height="241" key="GridCell.Tab.2.bottom" timestamp="1605666937998">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604851232274" />
-    <state width="1458" height="241" key="GridCell.Tab.2.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605663284913" />
-    <state width="1458" height="241" key="GridCell.Tab.2.center" timestamp="1605663284913">
+    <state width="1458" height="241" key="GridCell.Tab.2.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605666937998" />
+    <state width="1458" height="241" key="GridCell.Tab.2.center" timestamp="1605666937998">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1604851232274" />
-    <state width="1458" height="241" key="GridCell.Tab.2.center/0.0.1500.960@0.0.1500.960" timestamp="1605663284913" />
-    <state width="1458" height="241" key="GridCell.Tab.2.left" timestamp="1605663284913">
+    <state width="1458" height="241" key="GridCell.Tab.2.center/0.0.1500.960@0.0.1500.960" timestamp="1605666937998" />
+    <state width="1458" height="241" key="GridCell.Tab.2.left" timestamp="1605666937997">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1604851232273" />
-    <state width="1458" height="241" key="GridCell.Tab.2.left/0.0.1500.960@0.0.1500.960" timestamp="1605663284913" />
-    <state width="1458" height="241" key="GridCell.Tab.2.right" timestamp="1605663284913">
+    <state width="1458" height="241" key="GridCell.Tab.2.left/0.0.1500.960@0.0.1500.960" timestamp="1605666937997" />
+    <state width="1458" height="241" key="GridCell.Tab.2.right" timestamp="1605666937998">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1604851232274" />
-    <state width="1458" height="241" key="GridCell.Tab.2.right/0.0.1500.960@0.0.1500.960" timestamp="1605663284913" />
+    <state width="1458" height="241" key="GridCell.Tab.2.right/0.0.1500.960@0.0.1500.960" timestamp="1605666937998" />
     <state x="331" y="215" key="IDE.errors.dialog" timestamp="1604970810846">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -290,10 +304,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="252" y="125" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1605623706102" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1605664203191">
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1605665073615">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1605664203191" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1605665073615" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1604656611182">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -306,10 +320,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="273" y="238" width="816" height="550" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1604851183827" />
-    <state x="440" y="267" key="git4idea.merge.GitPullDialog" timestamp="1605664619102">
+    <state x="440" y="267" key="git4idea.merge.GitPullDialog" timestamp="1605665014893">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="440" y="267" key="git4idea.merge.GitPullDialog/0.0.1500.960@0.0.1500.960" timestamp="1605664619102" />
+    <state x="440" y="267" key="git4idea.merge.GitPullDialog/0.0.1500.960@0.0.1500.960" timestamp="1605665014893" />
     <state x="482" y="74" key="refactoring.ChangeSignatureDialog" timestamp="1604825377295">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

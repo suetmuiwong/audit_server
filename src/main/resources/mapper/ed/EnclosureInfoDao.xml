@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.et.auditServer.modules.ed.dao.EnclosureInfoDao">
+    <resultMap id="BaseResultMap" type="com.et.auditServer.modules.ed.entity.EnclosureInfo">
+        <id column="Id" property="Id" jdbcType="INTEGER"/>
+        <result column="EnclosureName" property="EnclosureName" jdbcType="VARCHAR"/>
+        <result column="Path" property="Path" jdbcType="VARCHAR"/>
+        <result column="ExpandedName" property="ExpandedName" jdbcType="VARCHAR"/>
+        <result column="creater" property="creater" jdbcType="VARCHAR"/>
+        <result column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="insert"  useGeneratedKeys="true" keyProperty="Id" parameterType="com.et.auditServer.modules.ed.entity.EnclosureInfo">
+        insert into ed_approvalNode_info
+         (
+            Id,
+            EnclosureName,
+            Path,
+            ExpandedName,
+            creater,
+            createTime
+        )
+        values (
+          #{Id,jdbcType=INTEGER},
+          #{EnclosureName,jdbcType=VARCHAR},
+          #{Path,jdbcType=VARCHAR},
+          #{ExpandedName,jdbcType=VARCHAR},
+          #{creater,jdbcType=VARCHAR},
+          #{createTime,jdbcType=TIMESTAMP}
+          )
+    </insert>
+
+    <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select * from ed_enclosure_info where Id = #{Id,jdbcType=INTEGER}
+    </select>
+
+</mapper>
