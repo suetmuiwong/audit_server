@@ -16,7 +16,6 @@ com\et\auditServer\modules\ed\service\impl\ApprovalRecordInfoServiceImpl.class
 com\et\auditServer\common\utils\MD5Util.class
 com\et\auditServer\modules\sys\annotation\MySysLog.class
 com\et\auditServer\modules\ed\service\CertInfoService.class
-com\et\auditServer\modules\ed\dao\ApprovalNodeDao.class
 com\et\auditServer\config\WebAppConfigurer.class
 com\et\auditServer\modules\sys\dto\UserDto.class
 com\et\auditServer\common\utils\CheckLtpaToken2Utils.class
@@ -54,7 +53,6 @@ com\et\auditServer\modules\ed\dto\AddHashInfoDTO.class
 com\et\auditServer\modules\sys\entity\MenuTreeSort.class
 com\et\auditServer\modules\sys\controller\PlatformController.class
 com\et\auditServer\modules\ed\dto\AddConfInfoDTO.class
-com\et\auditServer\modules\ed\dto\ApprovalNodeDTO.class
 com\et\auditServer\modules\sys\entity\MenuViewPermissions.class
 com\et\auditServer\common\utils\StringUtil$2.class
 com\et\auditServer\modules\sys\dao\MenuDao.class
