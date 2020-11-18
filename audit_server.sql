@@ -312,16 +312,13 @@ CREATE TABLE `ed_approval_record` (
       `approvalOpinion` varchar(500) COMMENT '审核意见',
       `attachment` int(11) COMMENT '附件',
       `approvalDate` datetime COMMENT '审核时间',
-      `category` varchar(50) COMMENT '类别:存证信息或者确认单',
+      `category` varchar(50) COMMENT '类别:存证信息或者确认单 存证状态：Cert，确认单状态：Conf',
       `creater` varchar(50) COMMENT '创建者',
       `createTime` datetime COMMENT '创建时间',
       `updates` varchar(50) COMMENT '更新者',
       `updateTime` datetime COMMENT '更新时间',
       PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
 
 -- ----------------------------
 -- 审批流程节点
@@ -335,7 +332,7 @@ CREATE TABLE `ed_approval_node` (
       `upNode` varchar(50) COMMENT '上个节点',
       `nextNode` varchar(50) COMMENT '下个节点',
       `node` int(4) COMMENT '节点',
-      `category` varchar(50) COMMENT '类别:存证信息或者确认单',
+      `category` varchar(50) COMMENT '类别:存证信息或者确认单 存证状态：Cert，确认单状态：Conf',
       PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
