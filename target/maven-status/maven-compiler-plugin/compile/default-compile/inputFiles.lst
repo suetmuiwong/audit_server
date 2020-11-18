@@ -42,6 +42,7 @@ E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\common\exception\TimeoutE
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\modules\ed\controller\ApprovalRecordInfoController.java
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\common\persistence\BaseDao.java
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\common\utils\FastDFSFile.java
+E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\modules\ed\dao\EnclosureInfoDao.java
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\modules\sys\controller\PlatformController.java
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\common\utils\AjaxResponseWriter.java
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\modules\sys\Interceptor\URLHandlerInterceptor.java
@@ -104,6 +105,7 @@ E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\common\persistence\CrudDa
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\common\utils\HttpUtils.java
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\AuditServerApplication.java
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\common\exception\CodeEnum.java
+E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\modules\ed\entity\EnclosureInfo.java
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\modules\sys\entity\MenuViewPermissions.java
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\common\utils\TxtToPdf.java
 E:\IntelliJIDEA\B\QKL\src\main\java\com\et\auditServer\common\utils\IPUtils.java

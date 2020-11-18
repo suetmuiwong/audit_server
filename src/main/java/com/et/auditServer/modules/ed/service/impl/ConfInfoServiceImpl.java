@@ -40,7 +40,7 @@ public class ConfInfoServiceImpl extends CrudService<ConfInfoDao, ConfInfo> impl
     @Override
     public JsonResult list(int pageNo, int pageSize, String title) {
         PageHelper.startPage(pageNo, pageSize);
-        List<ConfInfoDao> list = null;
+        List<ConfInfoDTO> list = null;
         if (userUtils.checkAllDataUser(loginCode())) {
             list = dao.findListPage(Constant.ALL_DATA_USER, title);
         } else {

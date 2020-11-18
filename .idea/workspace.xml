@@ -19,15 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6ff9e5-c4ea-4e7f-89e6-d8836f629897" name="Default Changelist" comment="添加审批相关表的列备注">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/EnclosureInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/entity/EnclosureInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ed/EnclosureInfoDao.xml" afterDir="false" />
+    <list default="true" id="fc6ff9e5-c4ea-4e7f-89e6-d8836f629897" name="Default Changelist" comment="添加附件表XML配置以及修改审批创建表的SQl">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dto/EnclosureInfoDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit_server.sql" beforeDir="false" afterPath="$PROJECT_DIR$/audit_server.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/ConfInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/ConfInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/EnclosureInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/dao/EnclosureInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/impl/ConfInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/et/auditServer/modules/ed/service/impl/ConfInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/IbsAudit.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/IbsAudit.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/IbsAudit.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/IbsAudit.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/et/auditServer/modules/ed/dao/ConfInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/et/auditServer/modules/ed/dao/ConfInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/et/auditServer/modules/ed/dao/EnclosureInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/et/auditServer/modules/ed/dao/EnclosureInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/et/auditServer/modules/ed/service/impl/ConfInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/et/auditServer/modules/ed/service/impl/ConfInfoServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +156,7 @@
       <workItem from="1604968773546" duration="7674000" />
       <workItem from="1605623558900" duration="4602000" />
       <workItem from="1605659681028" duration="52000" />
-      <workItem from="1605663968443" duration="3670000" />
+      <workItem from="1605663968443" duration="4537000" />
     </task>
     <task id="LOCAL-00001" summary="删除原先审核业务类">
       <created>1605664178216</created>
@@ -168,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605665064352</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加附件表XML配置以及修改审批创建表的SQl">
+      <created>1605667782550</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605667782550</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +200,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="删除原先审核业务类" />
     <MESSAGE value="添加审批相关表的列备注" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加审批相关表的列备注" />
+    <MESSAGE value="添加附件表XML配置以及修改审批创建表的SQl" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加附件表XML配置以及修改审批创建表的SQl" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="115" key="#SQL_Dialects" timestamp="1604744942058">
@@ -223,66 +235,66 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="659" y="224" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1605623600401" />
-    <state width="1458" height="241" key="GridCell.Tab.0.bottom" timestamp="1605666938296">
+    <state width="1458" height="241" key="GridCell.Tab.0.bottom" timestamp="1605668476852">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604851232270" />
-    <state width="1458" height="241" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605666938296" />
-    <state width="1458" height="241" key="GridCell.Tab.0.center" timestamp="1605666938295">
+    <state width="1458" height="241" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605668476852" />
+    <state width="1458" height="241" key="GridCell.Tab.0.center" timestamp="1605668476852">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1604851232269" />
-    <state width="1458" height="241" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1605666938295" />
-    <state width="1458" height="241" key="GridCell.Tab.0.left" timestamp="1605666938295">
+    <state width="1458" height="241" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1605668476852" />
+    <state width="1458" height="241" key="GridCell.Tab.0.left" timestamp="1605668476851">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1604851232269" />
-    <state width="1458" height="241" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1605666938295" />
-    <state width="1458" height="241" key="GridCell.Tab.0.right" timestamp="1605666938296">
+    <state width="1458" height="241" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1605668476851" />
+    <state width="1458" height="241" key="GridCell.Tab.0.right" timestamp="1605668476852">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1604851232270" />
-    <state width="1458" height="241" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1605666938296" />
-    <state width="1458" height="241" key="GridCell.Tab.1.bottom" timestamp="1605666937997">
+    <state width="1458" height="241" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1605668476852" />
+    <state width="1458" height="241" key="GridCell.Tab.1.bottom" timestamp="1605668476669">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604851232273" />
-    <state width="1458" height="241" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605666937997" />
-    <state width="1458" height="241" key="GridCell.Tab.1.center" timestamp="1605666937997">
+    <state width="1458" height="241" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605668476669" />
+    <state width="1458" height="241" key="GridCell.Tab.1.center" timestamp="1605668476669">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1604851232271" />
-    <state width="1458" height="241" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1605666937997" />
-    <state width="1458" height="241" key="GridCell.Tab.1.left" timestamp="1605666937997">
+    <state width="1458" height="241" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1605668476669" />
+    <state width="1458" height="241" key="GridCell.Tab.1.left" timestamp="1605668476669">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1604851232271" />
-    <state width="1458" height="241" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1605666937997" />
-    <state width="1458" height="241" key="GridCell.Tab.1.right" timestamp="1605666937997">
+    <state width="1458" height="241" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1605668476669" />
+    <state width="1458" height="241" key="GridCell.Tab.1.right" timestamp="1605668476669">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1604851232272" />
-    <state width="1458" height="241" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1605666937997" />
-    <state width="1458" height="241" key="GridCell.Tab.2.bottom" timestamp="1605666937998">
+    <state width="1458" height="241" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1605668476669" />
+    <state width="1458" height="241" key="GridCell.Tab.2.bottom" timestamp="1605668476669">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604851232274" />
-    <state width="1458" height="241" key="GridCell.Tab.2.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605666937998" />
-    <state width="1458" height="241" key="GridCell.Tab.2.center" timestamp="1605666937998">
+    <state width="1458" height="241" key="GridCell.Tab.2.bottom/0.0.1500.960@0.0.1500.960" timestamp="1605668476669" />
+    <state width="1458" height="241" key="GridCell.Tab.2.center" timestamp="1605668476669">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1604851232274" />
-    <state width="1458" height="241" key="GridCell.Tab.2.center/0.0.1500.960@0.0.1500.960" timestamp="1605666937998" />
-    <state width="1458" height="241" key="GridCell.Tab.2.left" timestamp="1605666937997">
+    <state width="1458" height="241" key="GridCell.Tab.2.center/0.0.1500.960@0.0.1500.960" timestamp="1605668476669" />
+    <state width="1458" height="241" key="GridCell.Tab.2.left" timestamp="1605668476669">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1604851232273" />
-    <state width="1458" height="241" key="GridCell.Tab.2.left/0.0.1500.960@0.0.1500.960" timestamp="1605666937997" />
-    <state width="1458" height="241" key="GridCell.Tab.2.right" timestamp="1605666937998">
+    <state width="1458" height="241" key="GridCell.Tab.2.left/0.0.1500.960@0.0.1500.960" timestamp="1605668476669" />
+    <state width="1458" height="241" key="GridCell.Tab.2.right" timestamp="1605668476669">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1398" height="388" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1604851232274" />
-    <state width="1458" height="241" key="GridCell.Tab.2.right/0.0.1500.960@0.0.1500.960" timestamp="1605666937998" />
+    <state width="1458" height="241" key="GridCell.Tab.2.right/0.0.1500.960@0.0.1500.960" timestamp="1605668476669" />
     <state x="331" y="215" key="IDE.errors.dialog" timestamp="1604970810846">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
@@ -304,10 +316,10 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="252" y="125" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1605623706102" />
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1605665073615">
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2" timestamp="1605667798282">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1605665073615" />
+    <state x="343" y="213" key="Vcs.Push.Dialog.v2/0.0.1500.960@0.0.1500.960" timestamp="1605667798282" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1604656611182">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -320,10 +332,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="273" y="238" width="816" height="550" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1604851183827" />
-    <state x="440" y="267" key="git4idea.merge.GitPullDialog" timestamp="1605665014893">
+    <state x="440" y="267" key="git4idea.merge.GitPullDialog" timestamp="1605667717991">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="440" y="267" key="git4idea.merge.GitPullDialog/0.0.1500.960@0.0.1500.960" timestamp="1605665014893" />
+    <state x="440" y="267" key="git4idea.merge.GitPullDialog/0.0.1500.960@0.0.1500.960" timestamp="1605667717991" />
     <state x="482" y="74" key="refactoring.ChangeSignatureDialog" timestamp="1604825377295">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

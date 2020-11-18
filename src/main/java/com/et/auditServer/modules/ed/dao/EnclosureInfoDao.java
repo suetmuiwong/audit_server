@@ -1,12 +1,13 @@
 package com.et.auditServer.modules.ed.dao;
 
 import com.et.auditServer.common.persistence.CrudDao;
+import com.et.auditServer.modules.ed.dto.EnclosureInfoDTO;
 import com.et.auditServer.modules.ed.entity.EnclosureInfo;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface EnclosureInfoDao extends CrudDao<EnclosureInfo> {
-
-
     /**
      *新增附件
      */
@@ -15,5 +16,5 @@ public interface EnclosureInfoDao extends CrudDao<EnclosureInfo> {
     /**
      * 根据Id查询附件
      */
-    int selectById(@Param("Id") int Id);
+    List<EnclosureInfoDTO> selectById(@Param("Id") int Id);
 }
