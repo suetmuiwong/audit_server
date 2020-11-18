@@ -167,4 +167,11 @@ public class UserService extends CrudService<UserDao,User> {
     public void batchSynUpdate(List<User> updateUserList) {
         dao.batchSynUpdate(updateUserList);
     }
+
+    /*
+     * 根据用户名称插叙用户信息
+     */
+    public User getUser(String userName) {
+        return dao.getUser(userName);
+    }
 }

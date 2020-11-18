@@ -28,4 +28,9 @@ public interface UserDao extends CrudDao<User> {
 
     void batchSynUpdate(@Param("updateUserList") List<User> updateUserList);
 
+    /*
+     * 根据用户名查询用户信息
+     */
+    User getUser(@Param("userName")String userName);
+
 }

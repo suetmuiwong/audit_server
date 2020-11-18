@@ -39,7 +39,7 @@ spring:
   redis:
     open: true  # 是否开启redis缓存  true开启   false关闭
     database: 0
-    host: 127.0.0.1
+    host: 47.94.20.128
     port: 6379
     password:  # 密码（默认为空）
     #sentinel:

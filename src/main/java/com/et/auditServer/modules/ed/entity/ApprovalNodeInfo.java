@@ -2,8 +2,10 @@ package com.et.auditServer.modules.ed.entity;
 
 import com.et.auditServer.common.persistence.DataEntity;
 
-public class ApprovalNodeInfo extends DataEntity<ApprovalNodeInfo> {
+import java.util.Date;
+import java.util.List;
 
+public class ApprovalNodeInfo extends DataEntity<ApprovalNodeInfo> {
     private int Id;
     private int processId;
     private String upNode;
