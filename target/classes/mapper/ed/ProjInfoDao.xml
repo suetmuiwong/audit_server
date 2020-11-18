@@ -15,6 +15,46 @@
         <result column="officeManager" property="officeManager" jdbcType="VARCHAR"/>
         <result column="creater" property="creater" jdbcType="VARCHAR"/>
         <result column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
+
+        <!--项目与存证映射关系一对多-->
+        <collection property="CertList" ofType="com.et.auditServer.modules.ed.entity.CertInfo" column="cert_Id">
+            <id column="cert_id" property="certId" jdbcType="INTEGER"/>
+            <result column="title" property="title" jdbcType="VARCHAR"/>
+            <result column="manager" property="manager" jdbcType="VARCHAR"/>
+            <result column="creater" property="creater" jdbcType="VARCHAR"/>
+            <result column="executor" property="executor" jdbcType="VARCHAR"/>
+            <result column="executorPhone" property="executorPhone" jdbcType="VARCHAR"/>
+            <result column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
+            <result column="deadline" property="deadline" jdbcType="VARCHAR"/>
+            <result column="status" property="status" jdbcType="TINYINT"/>
+            <result column="picture" property="picture" jdbcType="VARCHAR"/>
+            <result column="picHash" property="picHash" jdbcType="VARCHAR"/>
+            <result column="transfer" property="transfer" jdbcType="INTEGER"/>
+            <result column="cert_desc" property="certDest" jdbcType="VARCHAR"/>
+            <result column="auditor" property="auditor" jdbcType="VARCHAR"/>
+        </collection>
+
+        <!--项目与确认单映射关系一对多-->
+        <collection property="ConfList" ofType="com.et.auditServer.modules.ed.entity.ConfInfo" column="conf_Id">
+            <id column="conf_id" property="confId" jdbcType="INTEGER"/>
+            <result column="title" property="title" jdbcType="VARCHAR"/>
+            <result column="conf_desc" property="confDesc" jdbcType="VARCHAR"/>
+            <result column="summary" property="summary" jdbcType="VARCHAR"/>
+            <result column="auditor" property="auditor" jdbcType="VARCHAR"/>
+            <result column="creater" property="creater" jdbcType="VARCHAR"/>
+            <result column="audited" property="audited" jdbcType="VARCHAR"/>
+            <result column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
+            <result column="deadline" property="deadline" jdbcType="TIMESTAMP"/>
+            <result column="status" property="status" jdbcType="INTEGER"/>
+            <result column="picture" property="picture" jdbcType="VARCHAR"/>
+            <result column="picHash" property="picHash" jdbcType="VARCHAR"/>
+            <result column="reviewer" property="reviewer" jdbcType="VARCHAR"/>
+            <result column="auditTime" property="auditTime" jdbcType="TIMESTAMP"/>
+            <result column="reviewTime" property="reviewTime" jdbcType="TIMESTAMP"/>
+            <result column="manager" property="manager" jdbcType="VARCHAR"/>
+            <result column="managerLeader" property="managerLeader" jdbcType="VARCHAR"/>
+            <result column="department" property="department" jdbcType="VARCHAR"/>
+        </collection>
     </resultMap>
     <sql id="Base_Column_List">
     proj_id, proj_name, proj_desc,startTime,endTime, manager, auditee,  auditedManager,
